@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MailTemplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .main_table {
+            margin: 0 auto;
+            background-color: #f4f7fb;
+            width: 867px;
+
+        }
+
+        .main_cont_wrap {
+            width: 550px;
+            margin: 92px 158px 0px 159px;
+            background-color: #ffffff;
+            box-shadow: 10px 12px 0 0 rgba(0, 0, 0, 0.04);
+        / / padding: 0 px 65 px;
+        }
+
+        .sub_table {
+
+        }
+
+        .logo_img {
+            margin-left: 57px;
+            margin-top: 53px;
+        }
+
+        .mail_desc {
+            margin-top: 38px;
+            margin-left: 65px;
+            font-family: Geneva;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            text-align: left;
+            color: #2c2c2c;
+
+        }
+
+        .frnd_req {
+            margin-top: 27px;
+            margin-left: 65px;
+            margin-right: 65px;
+            font-family: Geneva;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.71;
+            letter-spacing: normal;
+            text-align: left;
+            color: #2c2c2c;
+
+        }
+        .user_profile{
+        }
+
+        .profile_img {
+            border-radius: 100%;
+        }
+
+        .profile_sec {
+            margin-left: 66px;
+            margin-top: 31px;
+        }
+
+        .name {
+            margin-top: 38px;
+            font-family: Geneva;
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #2c2c2c;
+            padding-left: 7px;
+        }
+
+        .loc {
+            opacity: 0.5;
+            font-family: Geneva;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #2c2c2c;
+        }
+
+        .accept_btn {
+            border-radius: 3px;
+            background-color: #f55017;
+            border: solid 1px #d03402;
+            font-family: Geneva;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            padding: 9px 19px;
+            margin-left: 190px;
+            margin-top: 50px;
+            /*doubt*/
+        }
+
+        .line_one {
+            border-bottom: 1px solid #dedede;
+            margin-top: 16px;
+            margin-left: 65px;
+        }
+
+        .line_two {
+            border-bottom: 1px solid #dedede;
+            margin-left: 65px;
+            margin-top: 54px;
+
+        }
+
+        /*.line_three {*/
+            /*border-bottom: 1px solid #dedede;*/
+            /*margin-left: 65px;*/
+            /*margin-top: 139px;*/
+            /*margin-bottom: 52px;*/
+        /*}*/
+
+        .line_three{
+            margin-top: 100px;
+            margin-left: 65px;
+        }
+
+        .profile_name {
+
+            font-family: Geneva;
+            font-size: 15px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #2c2c2c;
+        }
+
+        .location {
+            opacity: 0.5;
+            font-family: Geneva;
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #2c2c2c;
+
+        }
+
+        .profile_wrap {
+            margin-left: 70px;
+
+        }
+
+        .profile_wrap_sec {
+            margin-left: 70px;
+            margin-top: 41px;
+        }
+
+        .content_sec {
+            text-align: center;
+            font-family: Geneva;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #6c6c6c;
+            margin: 39px 0px;
+        }
+
+        .profile_pic {
+            border-radius: 100%;
+            display: inline-block;
+            width:80px;
+            height: 80px;
+
+        }
+
+        .mail_desc_sec {
+            font-family: Geneva;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.75;
+            letter-spacing: normal;
+            text-align: center;
+            color: #434343;
+            margin: 0px 65px;
+            width: 420px;
+        }
+
+        .sign_btn {
+            padding: 20px 93px 18px 93px;
+            font-family: Geneva;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 3px;
+            background-color: #3f9cea;
+        }
+
+        .sign_btn_wrap {
+            text-align: center;
+            margin-top: 37px;
+            margin-bottom: 100px;
+
+        }
+
+        .footer_links_sec a {
+            border-right: 1px solid #dedede;
+            color: #a8b0bf;
+            font-family: TrebuchetMS;
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            opacity: 0.9;
+            padding-right: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .footer_links_sec a:last-child {
+            border-right: none;
+        }
+
+        .footer_content {
+            opacity: 0.7;
+            font-family: TrebuchetMS;
+            font-size: 11px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.73;
+            letter-spacing: normal;
+            text-align: center;
+            color: #a8b0bf;
+            margin-top: 85px;
+        }
+
+        .footer_desc {
+            opacity: 0.7;
+            font-family: TrebuchetMS;
+            font-size: 11px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.73;
+            letter-spacing: normal;
+            text-align: center;
+            color: #a8b0bf;
+
+        }
+
+        .footer_icon_sec {
+            text-align: center;
+            margin: 51px 0px 48px 0px;
+        }
+
+        .icons_wrap li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .icons_wrap li a {
+            display: block;
+            padding-right: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<section class="mailtmpl_sec">
+    <div class="container">
+        <table class="table table-bordered main_table ">
+            <tbody>
+                <td>
+                    <div class="main_cont_wrap">
+                        <table class="table table-bordered sub_table">
+                            <tr>
+                                <td>
+                                    <div class="mail_banner">
+                                        <img src="images/Hdr-Banner.png">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="mail_logo">
+                                        <img class="logo_img" src="images/logo-current.png" alt="logo">
+                                        <div class="line_one"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mail_desc">Hey Kishore!</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="frnd_req">
+                                        Suresh Pattu sent you an invitation to join Tryilo community to enjoy a new
+                                        sharing service.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="user_profile">
+                                        <tr>
+                                            <td>
+                                                <div class="profile_sec">
+                                                    <img class="profile_img" src="http://i.pravatar.cc/55"
+                                                         alt="profile">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="name" href="">
+                                                    Suresh
+                                                    <div class="loc">dublin</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <button class="accept_btn">Accept</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="line_two"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="content_sec">Recent Members</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <table>
+                                                    <tr>
+
+                                                        <td>
+                                                            <div class="profile_wrap">
+                                                                <a><img class="profile_pic"
+                                                                        src="http://i.pravatar.cc/80"></a>
+                                                                <div class="profile_name" href="">
+                                                                    Nike
+                                                                    <div class="location">dublin</div>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <div class="profile_wrap">
+                                                                <a><img class="profile_pic"
+                                                                        src="images/user-img-1.png"></a>
+                                                                <div class="profile_name" href="">
+                                                                    Sumanth
+                                                                    <div class="location">dublin</div>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <div class="profile_wrap">
+                                                                <a><img class="profile_pic"
+                                                                        src="images/user-img-2.png"></a>
+                                                                <div class="profile_name" href="">
+                                                                    Payal
+                                                                    <div class="location">dublin</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr colspan="3">
+                                            <td>
+                                                <div class="profile_wrap_sec">
+                                                    <a><img class="profile_pic" src="http://i.pravatar.cc/80"></a>
+                                                    <div class="profile_name" href="">
+                                                        Karthick
+                                                        <div class="location">dublin</div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                            <td>
+                                                <div class="profile_wrap_sec">
+                                                    <a><img class="profile_pic" src="http://i.pravatar.cc/80"></a>
+                                                    <div class="profile_name" href="">
+                                                        Suresh
+                                                        <div class="location">dublin</div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                            <td>
+                                                <div class="profile_wrap_sec">
+                                                    <a><img class="profile_pic" src="images/kishore.png"></a>
+                                                    <div class="profile_name" href="">
+                                                        Kishore
+                                                        <div class="location">dublin</div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mail_desc_sec">
+                                        <p>Tryilo is Ireland's largest sharing marketplace services, where you can rent
+                                            or hire everything you need starting at €5.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="sign_btn_wrap">
+                                        <button class="sign_btn">Signup</button>
+                                    </div>
+                                    <div class="line_three">
+                                        <img src="images/line-img.png">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="footer_content">
+                        <div class="footer_links_sec">
+                            <a>Unsubscribe</a>
+                            <a>Privacy Policy </a>
+                            <a>T&C </a>
+                            <a>support@tryilo.com</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="footer_desc">
+                        GW 211 The Greenway Hub, Dublin Institute of Technology., Grangegorman Road Lower, Dublin 7.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="footer_icon_sec">
+                        <ul class="icons_wrap">
+                            <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                            <li><a href="#"><img src="images/tw-icon.png"></a></li>
+                            <li><a href="#"><img src="images/int-icon.png"></a></li>
+                            <li><a href="#"><img src="images/linked-icon.png"></a></li>
+                            <li><a href="#"><img src="images/gplus-icon.png"></a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+
+
+            </tbody>
+
+        </table>
+    </div>
+
+</section>
+
+</body>
+</html>
